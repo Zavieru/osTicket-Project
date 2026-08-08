@@ -17,9 +17,8 @@ The implementation is hosted locally on a bare-metal homelab infrastructure, spl
 * **Compute Node (Host Hardware):** HP ProDesk (Intel Core i5-9500, 32GB DDR4 RAM, 500GB Internal NVMe)
 * **Hypervisor:** Proxmox VE (Type-1 Bare-Metal Hypervisor running on host NVMe)
 * **Virtual Machine (Guest OS):** Ubuntu Server 22.04 LTS (40GB Virtual Disk, 4GB Dedicated RAM, 2 CPU Cores)
-* **Management Station:** ASUS ZenBook 14 OLED (SSH client & Web Browser Control Center)
+* **Management Station:** Custom built PC (SSH client & Web Browser Control Center)
 
-![Proxmox VM Overview](https://via.placeholder.com/800x400?text=Insert+Proxmox+VM+Dashboard+Screenshot+Here)
 
 ---
 
