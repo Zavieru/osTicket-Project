@@ -19,7 +19,7 @@ The implementation is hosted locally on a bare-metal homelab infrastructure, spl
 * **Virtual Machine (Guest OS):** Ubuntu Server 22.04 LTS (40GB Virtual Disk, 4GB Dedicated RAM, 2 CPU Cores)
 * **Management Station:** Custom built PC (SSH client & Web Browser Control Center)
 
-![Proxmox VM Overview]<img width="1917" height="909" alt="image" src="https://github.com/user-attachments/assets/2111b31e-f9f8-4787-b0f4-5fe4451d7da5" />
+[Proxmox VM Overview]<img width="1917" height="909" alt="image" src="https://github.com/user-attachments/assets/2111b31e-f9f8-4787-b0f4-5fe4451d7da5" />
 
 ---
 
@@ -66,7 +66,8 @@ FLUSH PRIVILEGES;
 2. Created the core runtime configuration file `ost-config.php` and temporarily assigned write permissions (`chmod 0666`).
 3. Navigated to the graphical setup installer at `http://<SERVER_IP>/osticket/upload/setup/` and connected the front-end installer to the backend MariaDB database (`osticket_dbuser`).
 
-![osTicket Web Installation](https://via.placeholder.com/800x400?text=Insert+osTicket+Web+Installer+Screenshot+Here)
+[osTicket Web Installation] <img width="957" height="465" alt="image" src="https://github.com/user-attachments/assets/8cc71772-667d-4660-94ce-ee5054dff0d0" />
+
 
 ---
 
@@ -91,7 +92,8 @@ To transform the raw osTicket setup into a realistic corporate IT / SOC environm
 * Configured administrative permission sets enforcing the **Principle of Least Privilege (PoLP)**.
 * Created the **`Supreme Admin / SOC Lead`** role with full administrative and ticket modification rights.
 
-![RBAC Roles](https://via.placeholder.com/800x400?text=Insert+Admin+Roles+Screenshot+Here)
+[RBAC Roles]<img width="957" height="498" alt="Admin Role Added Screenshot" src="https://github.com/user-attachments/assets/70798555-6509-4282-a075-82b48926ad6a" />
+
 
 ---
 
@@ -100,7 +102,8 @@ Created dedicated operational queues to partition ticket visibility between stan
 * **SysAdmin (Public Queue):** Handles infrastructure, user management, and general software/hardware requests. Bound to **Standard Support SLA**.
 * **SOC / Security Incident Response (Private Queue):** Restricted internal queue for security breaches, phishing triage, and malware investigations. Bound to **Emergency SOC Priority SLA**.
 
-![Enterprise Departments](https://via.placeholder.com/800x400?text=Insert+Departments+Screenshot+Here)
+[Enterprise Departments] <img width="958" height="524" alt="New Derpartments" src="https://github.com/user-attachments/assets/f155c618-b53b-476c-80d6-50c2023c7df0" />
+
 
 ---
 
@@ -110,7 +113,8 @@ Enforced strict resolution timeframes to govern ticket response metrics:
 * **High Priority:** 4-Hour grace period for major system outages.
 * **Standard Support:** 24-Hour grace period for routine maintenance.
 
-![SLA Plans](https://via.placeholder.com/800x400?text=Insert+SLA+Plans+Screenshot+Here)
+[SLA Plans] <img width="953" height="455" alt="New SLA plans" src="https://github.com/user-attachments/assets/84dff531-43be-4be9-8d93-d3ac1f2526bc" />
+
 
 ---
 
