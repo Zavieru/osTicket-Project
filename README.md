@@ -19,12 +19,13 @@ The implementation is hosted locally on a bare-metal homelab infrastructure, spl
 * **Virtual Machine (Guest OS):** Ubuntu Server 22.04 LTS (40GB Virtual Disk, 4GB Dedicated RAM, 2 CPU Cores)
 * **Management Station:** Custom built PC (SSH client & Web Browser Control Center)
 
+![Proxmox VM Overview](https://via.placeholder.com/800x400?text=Insert+Proxmox+VM+Dashboard+Screenshot+Here)
 
 ---
 
 ## 🛠️ Software Stack & Dependencies
 
-The application layer relies on a optimized LAMP (Linux, Apache, MariaDB, PHP) stack built on the Ubuntu VM:
+The application layer relies on an optimized LAMP (Linux, Apache, MariaDB, PHP) stack built on the Ubuntu VM:
 
 | Service / Layer | Package / Tool Installed | Purpose |
 | :--- | :--- | :--- |
@@ -56,3 +57,71 @@ CREATE DATABASE osticket;
 CREATE USER 'osticket_dbuser'@'localhost' IDENTIFIED BY '<STRONG_PASSWORD>';
 GRANT ALL PRIVILEGES ON osticket.* TO 'osticket_dbuser'@'localhost';
 FLUSH PRIVILEGES;
+```
+
+---
+
+### Phase 3: osTicket Deployment & Web Installation
+1. Retrieved osTicket v1.18.1 source code and extracted files to `/var/www/html/osticket`.
+2. Created the core runtime configuration file `ost-config.php` and temporarily assigned write permissions (`chmod 0666`).
+3. Navigated to the graphical setup installer at `http://<SERVER_IP>/osticket/upload/setup/` and connected the front-end installer to the backend MariaDB database (`osticket_dbuser`).
+
+![osTicket Web Installation](https://via.placeholder.com/800x400?text=Insert+osTicket+Web+Installer+Screenshot+Here)
+
+---
+
+### Phase 4: Post-Install Hardening & Security Cleanup
+To prevent configuration tampering and eliminate security vulnerabilities:
+1. Locked down file permissions on the core configuration file:
+   ```bash
+   sudo chmod 0644 /var/www/html/osticket/upload/include/ost-config.php
+   ```
+2. Removed the installer setup directory to prevent unauthorized system re-initialization:
+   ```bash
+   sudo rm -rf /var/www/html/osticket/upload/setup
+   ```
+
+---
+
+## ⚙️ Enterprise Configuration & Operational Controls
+
+To transform the raw osTicket setup into a realistic corporate IT / SOC environment, the following structural controls were configured:
+
+### 1. Role-Based Access Control (RBAC)
+* Configured administrative permission sets enforcing the **Principle of Least Privilege (PoLP)**.
+* Created the **`Supreme Admin / SOC Lead`** role with full administrative and ticket modification rights.
+
+![RBAC Roles](https://via.placeholder.com/800x400?text=Insert+Admin+Roles+Screenshot+Here)
+
+---
+
+### 2. Enterprise Department Routing
+Created dedicated operational queues to partition ticket visibility between standard IT support and security personnel:
+* **SysAdmin (Public Queue):** Handles infrastructure, user management, and general software/hardware requests. Bound to **Standard Support SLA**.
+* **SOC / Security Incident Response (Private Queue):** Restricted internal queue for security breaches, phishing triage, and malware investigations. Bound to **Emergency SOC Priority SLA**.
+
+![Enterprise Departments](https://via.placeholder.com/800x400?text=Insert+Departments+Screenshot+Here)
+
+---
+
+### 3. Service Level Agreement (SLA) Enforcements
+Enforced strict resolution timeframes to govern ticket response metrics:
+* **Emergency (SOC Priority):** 1-Hour grace period (24/7 schedule) for critical security incidents.
+* **High Priority:** 4-Hour grace period for major system outages.
+* **Standard Support:** 24-Hour grace period for routine maintenance.
+
+![SLA Plans](https://via.placeholder.com/800x400?text=Insert+SLA+Plans+Screenshot+Here)
+
+---
+
+## 🔑 Access Portals & Operational Verification
+
+* **Staff & Admin Control Panel:** `http://<SERVER_IP>/osticket/upload/scp/`
+* **End-User Public Portal:** `http://<SERVER_IP>/osticket/upload/`
+
+---
+
+## 📝 Next Steps (In Progress)
+- [ ] **Help Topics Setup:** Configure category-based automatic routing rules.
+- [ ] **Agent & User Provisioning:** Create Tier-1 analyst accounts to test multi-user identity workflows.
+- [ ] **Live Incident Simulation:** Execute and document end-to-end ticket lifecycle handling (Submission $\rightarrow$ Triage $\rightarrow$ Escalation $\rightarrow$ Resolution).
