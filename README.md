@@ -64,7 +64,7 @@ FLUSH PRIVILEGES;
 ### Phase 3: osTicket Deployment & Web Installation
 1. Retrieved osTicket v1.18.1 source code and extracted files to `/var/www/html/osticket`.
 2. Created the core runtime configuration file `ost-config.php` and temporarily assigned write permissions (`chmod 0666`).
-3. Navigated to the graphical setup installer at `http://<SERVER_IP>/osticket/upload/setup/` and connected the front-end installer to the backend MariaDB database (`osticket_dbuser`).
+3. Navigated to the graphical setup installer at `http://192.168.1.188/osticket/upload/setup/` and connected the front-end installer to the backend MariaDB database (`osticket_dbuser`).
 
 [osTicket Web Installation] <img width="957" height="465" alt="image" src="https://github.com/user-attachments/assets/8cc71772-667d-4660-94ce-ee5054dff0d0" />
 
@@ -120,8 +120,8 @@ Enforced strict resolution timeframes to govern ticket response metrics:
 
 ## 🔑 Access Portals & Operational Verification
 
-* **Staff & Admin Control Panel:** `http://<SERVER_IP>/osticket/upload/scp/`
-* **End-User Public Portal:** `http://<SERVER_IP>/osticket/upload/`
+* **Staff & Admin Control Panel:** `http://192.168.1.188/osticket/upload/scp/`
+* **End-User Public Portal:** `http://192.168.1.188/osticket/upload/`
 
 ---
 
