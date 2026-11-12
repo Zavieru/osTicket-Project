@@ -118,14 +118,53 @@ Enforced strict resolution timeframes to govern ticket response metrics:
 
 ---
 
-## 🔑 Access Portals & Operational Verification
 
-* **Staff & Admin Control Panel:** `http://192.168.1.188/osticket/upload/scp/`
-* **End-User Public Portal:** `http://192.168.1.188/osticket/upload/`
+### 4. Automated Ticket Routing (Help Topics)
+Configured public intake categories to automatically route incoming tickets to the appropriate operational queue and bind the corresponding SLA timer without manual triage:
+* **Security Incident / Phishing Report** $\rightarrow$ Routes to **SOC / Security Incident Response** (`Emergency - 1 Hour SLA`)
+* **Password Reset / Account Access** $\rightarrow$ Routes to **SysAdmin** (`Standard Support - 24 Hour SLA`)
+* **Hardware / Workstation Issue** $\rightarrow$ Routes to **SysAdmin** (`Standard Support - 24 Hour SLA`)
+
+<!-- TODO: SCREENSHOT 6 (HELP TOPICS) -->
+<!-- Insert screenshot of Admin Panel -> Manage -> Help Topics -->
+![Help Topics Routing](https://via.placeholder.com/800x400?text=Insert+Help+Topics+Screenshot+Here)
 
 ---
 
-## 📝 Next Steps (In Progress)
-- [ ] **Help Topics Setup:** Configure category-based automatic routing rules.
-- [ ] **Agent & User Provisioning:** Create Tier-1 analyst accounts to test multi-user identity workflows.
-- [ ] **Live Incident Simulation:** Execute and document end-to-end ticket lifecycle handling (Submission $\rightarrow$ Triage $\rightarrow$ Escalation $\rightarrow$ Resolution).
+### 5. Multi-Tier Agent Provisioning (Least Privilege)
+Provisioned separate staff identities to enforce the **Principle of Least Privilege (PoLP)**:
+* **Supreme Admin / SOC Lead (`zav`):** Full administrative rights and extended access to private SOC incident queues.
+* **Tier-1 IT Support (`alex.t1`):** Restricted operational role scoped strictly to the `SysAdmin` department with no Admin Panel access, no ticket deletion rights, and zero visibility into private SOC security incidents.
+
+<!-- TODO: SCREENSHOT 7 (AGENTS) -->
+<!-- Insert screenshot of Admin Panel -> Agents -> Agents showing both accounts -->
+![Agent Accounts](https://via.placeholder.com/800x400?text=Insert+Agents+List+Screenshot+Here)
+
+---
+
+## 🧪 Phase 6: Live Incident & Ticket Lifecycle Simulation
+
+Executed end-to-end testing across both the public user portal and the restricted staff control panel to validate routing, SLA enforcement, and audit logging:
+1. **End-User Intake:** Submitted a simulated account lockout ticket (`#629901`) via the public portal using the *Password Reset / Account Access* Help Topic[cite: 6].
+2. **Automated Triage:** Confirmed osTicket automatically assigned the ticket to the **SysAdmin** department and applied the **Standard Support** SLA plan[cite: 6].
+3. **RBAC Verification & Resolution:** Logged in as Tier-1 analyst **`Alex Tier1`**, verified that private SOC tickets were hidden and Admin settings were restricted, documented identity verification in the ticket thread, and transitioned the status to **Resolved**[cite: 6].
+
+<!-- TODO: SCREENSHOT 8 (COMPLETED TICKET AUDIT TRAIL) -->
+<!-- Insert screenshot of Ticket #629901 showing the complete audit trail -->
+![Ticket Lifecycle Audit Trail](https://via.placeholder.com/800x400?text=Insert+Completed+Ticket+Thread+Screenshot+Here)
+
+---
+
+## 🔑 Access Portals & Operational Verification
+
+* **Staff & Admin Control Panel:** `http://<SERVER_IP>/osticket/upload/scp/`
+* **End-User Public Portal:** `http://<SERVER_IP>/osticket/upload/`
+
+---
+
+## ✅ Project Milestones Completed
+- [x] **Infrastructure & LAMP Stack:** Provisioned Ubuntu Server VM on Proxmox VE and deployed Apache, MariaDB, and PHP.
+- [x] **System Hardening:** Locked down `ost-config.php` (`chmod 0644`) and purged `/setup` installation files.
+- [x] **Enterprise RBAC & Queues:** Built `Supreme Admin` and `Tier-1 IT Support` roles alongside isolated `SysAdmin` and `SOC` departments.
+- [x] **SLA & Help Topics:** Enforced 1-hour, 4-hour, and 24-hour SLA tiers mapped to automated Help Topic routing.
+- [x] **Live Lifecycle Verification:** Executed and documented end-to-end ticket submission, triage, and resolution with immutable audit trails.
