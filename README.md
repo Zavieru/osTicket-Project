@@ -127,7 +127,7 @@ Configured public intake categories to automatically route incoming tickets to t
 
 <!-- TODO: SCREENSHOT 6 (HELP TOPICS) -->
 <!-- Insert screenshot of Admin Panel -> Manage -> Help Topics -->
-![Help Topics Routing](<img width="1330" height="751" alt="Screenshot 2026-11-12 173400" src="https://github.com/user-attachments/assets/a666ea59-f87a-4f46-a231-79f8d317c37b" />)
+[Help Topics Routing](/<img width="1330" height="751" alt="Screenshot 2026-11-12 173400" src="https://github.com/user-attachments/assets/a666ea59-f87a-4f46-a231-79f8d317c37b" />)
 
 ---
 
