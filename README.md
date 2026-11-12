@@ -19,7 +19,8 @@ The implementation is hosted locally on a bare-metal homelab infrastructure, spl
 * **Virtual Machine (Guest OS):** Ubuntu Server 22.04 LTS (40GB Virtual Disk, 4GB Dedicated RAM, 2 CPU Cores)
 * **Management Station:** Custom built PC (SSH client & Web Browser Control Center)
 
-[Proxmox VM Overview]<img width="1917" height="909" alt="image" src="https://github.com/user-attachments/assets/2111b31e-f9f8-4787-b0f4-5fe4451d7da5" />
+[Proxmox VM Overview] <img width="2559" height="1283" alt="image" src="https://github.com/user-attachments/assets/ab40ee92-0763-492a-816f-9049352b01df" />
+
 
 ---
 
