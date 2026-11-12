@@ -138,7 +138,7 @@ Provisioned separate staff identities to enforce the **Principle of Least Privil
 
 <!-- TODO: SCREENSHOT 7 (AGENTS) -->
 <!-- Insert screenshot of Admin Panel -> Agents -> Agents showing both accounts -->
-![Agent Accounts](<img width="1336" height="554" alt="Screenshot 2026-11-12 174150" src="https://github.com/user-attachments/assets/a14be37c-d5c0-443f-b547-9d64b856d4d9" />)
+[Agent Accounts] <img width="1336" height="554" alt="Screenshot 2026-11-12 174150" src="https://github.com/user-attachments/assets/a14be37c-d5c0-443f-b547-9d64b856d4d9" />
 
 ---
 
@@ -151,7 +151,7 @@ Executed end-to-end testing across both the public user portal and the restricte
 
 <!-- TODO: SCREENSHOT 8 (COMPLETED TICKET AUDIT TRAIL) -->
 <!-- Insert screenshot of Ticket #629901 showing the complete audit trail -->
-![Ticket Lifecycle Audit Trail](<img width="782" height="631" alt="Screenshot 2026-11-12 184239" src="https://github.com/user-attachments/assets/a4178c08-6039-447d-a5cc-f9080325c4b8" />)
+[Ticket Lifecycle Audit Trail] <img width="782" height="631" alt="Screenshot 2026-11-12 184239" src="https://github.com/user-attachments/assets/a4178c08-6039-447d-a5cc-f9080325c4b8" />
 
 ---
 
