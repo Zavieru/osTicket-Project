@@ -157,8 +157,8 @@ Executed end-to-end testing across both the public user portal and the restricte
 
 ## 🔑 Access Portals & Operational Verification
 
-* **Staff & Admin Control Panel:** `http://<SERVER_IP>/osticket/upload/scp/`
-* **End-User Public Portal:** `http://<SERVER_IP>/osticket/upload/`
+* **Staff & Admin Control Panel:** `http://<192.168.1.188>/osticket/upload/scp/`
+* **End-User Public Portal:** `http://<192.168.1.188>/osticket/upload/`
 
 ---
 
