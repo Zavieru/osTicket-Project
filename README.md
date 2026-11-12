@@ -127,7 +127,7 @@ Configured public intake categories to automatically route incoming tickets to t
 
 <!-- TODO: SCREENSHOT 6 (HELP TOPICS) -->
 <!-- Insert screenshot of Admin Panel -> Manage -> Help Topics -->
-![Help Topics Routing](https://via.placeholder.com/800x400?text=Insert+Help+Topics+Screenshot+Here)
+![Help Topics Routing](<img width="1330" height="751" alt="Screenshot 2026-11-12 173400" src="https://github.com/user-attachments/assets/a666ea59-f87a-4f46-a231-79f8d317c37b" />)
 
 ---
 
@@ -138,7 +138,7 @@ Provisioned separate staff identities to enforce the **Principle of Least Privil
 
 <!-- TODO: SCREENSHOT 7 (AGENTS) -->
 <!-- Insert screenshot of Admin Panel -> Agents -> Agents showing both accounts -->
-![Agent Accounts](https://via.placeholder.com/800x400?text=Insert+Agents+List+Screenshot+Here)
+![Agent Accounts](<img width="1336" height="554" alt="Screenshot 2026-11-12 174150" src="https://github.com/user-attachments/assets/a14be37c-d5c0-443f-b547-9d64b856d4d9" />)
 
 ---
 
@@ -151,7 +151,7 @@ Executed end-to-end testing across both the public user portal and the restricte
 
 <!-- TODO: SCREENSHOT 8 (COMPLETED TICKET AUDIT TRAIL) -->
 <!-- Insert screenshot of Ticket #629901 showing the complete audit trail -->
-![Ticket Lifecycle Audit Trail](https://via.placeholder.com/800x400?text=Insert+Completed+Ticket+Thread+Screenshot+Here)
+![Ticket Lifecycle Audit Trail](<img width="782" height="631" alt="Screenshot 2026-11-12 184239" src="https://github.com/user-attachments/assets/a4178c08-6039-447d-a5cc-f9080325c4b8" />)
 
 ---
 
